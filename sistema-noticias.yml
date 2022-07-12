@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sistema-noticias
+  labels:
+    app: sistema-noticias
+spec:
+  containers:
+    - name: sistema-noticias
+      image: aluracursos/sistema-noticias:1
+      ports:
+      # cada pod tem seu respectivo IP, por isso não temos conflito entre esse e o portal-noticias
+        - containerPort: 80
