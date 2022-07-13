@@ -1,0 +1,7 @@
+# olhando dentro do pod portal-noticias kubectl exec -it portal-noticias -- bash nós temos um arquivo chamado configuracao.php, ele que pede esse IP_SISTEMA
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: portal-configmap
+data:
+  IP_SISTEMA: http://localhost:30001

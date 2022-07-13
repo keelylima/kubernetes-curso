@@ -1,0 +1,10 @@
+# dentro do pod sistema noticias tem um arquivo de bancodedados.php que pede essas envs
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sistema-configmap
+data:
+  HOST_DB: svc-db-noticias:3306
+  USER_DB: value
+  PASS_DB: value
+  DATABASE_DB: value
