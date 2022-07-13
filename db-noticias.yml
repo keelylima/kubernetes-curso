@@ -10,10 +10,15 @@ spec:
       image: aluracursos/mysql-db:1
       ports:
         - containerPort: 3306
-      env:
-        - name: "MYSQL_ROOT_PASSWORD"
-          value: "value"
-        - name: "MYSQL_DATABASE"
-          value: "value"
-        - name: "MYSQL_PASSWORD"
-          value: "value"
+      # passar todos os valores
+      envFrom:
+        - configMapRef:
+            name: db-configmap
+
+      # se eu quiser passar um valor único
+      # env:
+      #   - name: MYSQL_ROOT_PASSWORD
+      #     valueFrom:
+      #       configMapKeyRef:
+      #         name: db-configmap
+      #         key: MYSQL_ROOT_PASSWORD
