@@ -1,0 +1,10 @@
+# storageClass vai gerenciar o pvc (PersistentVolumeClaim) e o pvc é quem acessa o pv (PersistentVolume)
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: slow
+provisioner: kubernets.io/gce-pd
+parameters:
+  type: pd-standard
+  fstype: ext4
+  replication-type: none

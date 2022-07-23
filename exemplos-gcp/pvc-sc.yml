@@ -1,0 +1,13 @@
+# esse é o pvc que o sc está gerenciando
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-1
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  # tem que ser o mesmo nome no sc.yml
+  storageClassName: slow
