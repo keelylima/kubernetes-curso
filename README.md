@@ -11,5 +11,8 @@ Resumo do conteúdo estudado:
 * Variáveis de ambiente
 * ReplicaSets e Deployments
 * Persistência de dados (PersistentVolume/PersistentVolumeClaim/StorageClass)
+* Storage Classes e StatefulSets
+* Probes
+* Horizontal Pod Autoscaler
 
 Anotações no Notion: [aqui](https://www.notion.so/Part-02-0c4bcafae6ce41139e89b6b75cb7c8d5)
